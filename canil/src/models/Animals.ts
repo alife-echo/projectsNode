@@ -1,18 +1,18 @@
 
+
 type Animals = {
      home:string,
      dogs:string,
      cat:string
      fish:string
 }
-
-export const Animals : Animals = {
-    home:'/',
-    dogs:'/dogs',
-    cat:'/cats',
-    fish:'/fishs'
+type AnimalsInfo = {
+      img:string,
+      name:string,
+      color:string,
+      genre:string
+      especie:string
 }
-
 export const Title : Animals = {
      home:'Todos os Animais',
      dogs:'Cachorros',
@@ -26,3 +26,37 @@ export const Imgs : Animals = {
      cat:'banner_cat.jpg',
      fish:'banner_fish.jpg'
 }
+
+export const AnimalsSpec : AnimalsInfo[]= [
+      {img:'images/pastor-alemao.jpg',name:'Pastor-alemão',color:'Amarelo e Preto',genre:'Masculino',especie:'cachorro'},
+      {img:'images/labrador.jpg',name:'Labrador-retriever',color:'Branco',genre:'Masculino',especie:'cachorro'},
+      {img:'images/zwergspitz.jpg',name:'Zwergspitz',color:'Amarelo',genre:'Feminino',especie:'cachorro'},
+      {img:'images/husky.jpg',name:'Husky Siberiano',color:'Branco e Preto',genre:'Masculino',especie:'cachorro'},
+      {img:'images/golden.jpg',name:'Golden Retriever',color:'Amarelo',genre:'Masculino',especie:'cachorro'},
+      {img:'images/poodle.jpg',name:'Poodle',color:'Branco',genre:'Feminino',especie:'cachorro'},
+      {img:'images/bulldog.jpg',name:'Bulldog',color:'Branco e Amarelo',genre:'Masculino',especie:'cachorro'},
+      {img:'images/persa.jpg',name:'Persa',color:'Amarelo',genre:'Masculino',especie:'gato'},
+      {img:'images/mainecoon.jpg',name:'Maine Coon',color:'Preto e Branco',genre:'Masculino',especie:'gato'},
+      {img:'images/bengal.jpg',name:'Bengal',color:'Branco, Preto e Amarelo',genre:'Feminino',especie:'gato'},
+      {img:'images/siames.jpg',name:'Siamês',color:'Amarelo e Preto',genre:'Amarelo e Preto',especie:'gato'},
+      {img:'images/sphynx.jpg',name:'Sphynx',color:'Branco',genre:'Masculino',especie:'gato'},
+      {img:'images/neon.jpg',name:'Tetra Neon',color:'Vermelho e Azul',genre:'Masculino',especie:'peixe'},
+      {img:'images/matogrosso.jpg',name:'Mato Grosso',color:'Laranja',genre:'Masculino',especie:'peixe'},
+      {img:'images/limpavidro.jpg',name:'Limpa Vidro',color:'Verde e Branco',genre:'Masculino',especie:'peixe'},
+      {img:'images/tanictis.jpg',name:'Tanictis',color:'Vermelho',genre:'Masculino',especie:'peixe'},
+      {img:'images/acara.jpg',name:'Acará Bandeira',color:'Preto',genre:'Masculino',especie:'peixe'},
+
+]
+/*
+export const filter = (p:string) =>{
+          let formatP = p.toLowerCase()
+          Animals.map((item)=>{
+                if(!item.name.toLowerCase().includes(formatP)){
+                     return false
+                }
+                else{
+                  return   [item.name]
+                }
+          })
+      
+}*/
