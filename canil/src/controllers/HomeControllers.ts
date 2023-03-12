@@ -2,40 +2,36 @@ import { Request,Response } from "express";
 import { Animals,Title,Imgs } from "../models/Animals";
 export const Home = ((req:Request,res:Response)=>{
      res.render('pages/index',{
-         AnimalsHomeLink:Animals.home,
-         AnimalsDogLink:Animals.dogs,
-         AnimalsCatLink:Animals.cat,
-         AnimalsFishLink:Animals.fish,
-         TitleHome:Title.home,
-         ImgsHome:Imgs.home
+            banner:{
+                 title:Title.home,
+                 background:Imgs.home,
+            },
+            
      })
 })
 export const dogsPage = ((req:Request,res:Response)=>{
-    res.render('pages/dogs',{
-        AnimalsHomeLink:Animals.home,
-        AnimalsCatLink:Animals.cat,
-        AnimalsFishLink:Animals.fish,
-        TitleDog:Title.dogs,
-        ImgsDog:Imgs.dogs
+    res.render('pages/index',{
+        banner:{
+            title:Title.dogs,
+            background:Imgs.dogs,
+       }
     })
 })
 export const catsPage = ((req:Request,res:Response)=>{
-    res.render('pages/cats',{
-        AnimalsHomeLink:Animals.home,
-        AnimalsDogLink:Animals.dogs,
-        AnimalsFishLink:Animals.fish,
-        TitleCat:Title.cat,
-        ImgsCat:Imgs.cat
+    res.render('pages/index',{
+        banner:{
+            title:Title.cat,
+            background:Imgs.cat,
+       }
       
     })
 })
 
 export const fishPage = ((req:Request,res:Response)=>{
-    res.render('pages/fishs',{
-        AnimalsHomeLink:Animals.home,
-        AnimalsDogLink:Animals.dogs,
-        AnimalsCatLink:Animals.cat,
-        TitleFish:Title.fish,
-        ImgsFish:Imgs.fish
+    res.render('pages/index',{
+        banner:{
+            title:Title.fish,
+            background:Imgs.fish,
+       }
     })
 })
