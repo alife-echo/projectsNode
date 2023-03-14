@@ -1,3 +1,4 @@
+import { it } from "node:test"
 
 
 type Animals = {
@@ -59,6 +60,12 @@ export const AnimalsFunctions = {
          let manipulation:AnimalsInfo[] = AnimalsSpec.filter((item)=>item.especie === p)
          return manipulation
       
+     },
+     filterInput:(p:string) =>{
+          let filterSearch  = AnimalsSpec.map((item)=> {if(item.name.toLowerCase().includes(p.toLowerCase())){return item}}).filter((justResult)=> justResult !== undefined)
+          return filterSearch
      }
 }
+
+
 

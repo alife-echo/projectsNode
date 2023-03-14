@@ -1,5 +1,5 @@
 import { Request,Response } from "express";
-import { AnimalsSpec,Title,Imgs,AnimalsFunctions } from "../models/Animals";
+import { Title,Imgs,AnimalsFunctions } from "../models/Animals";
 export const Home = ((req:Request,res:Response)=>{
 
      res.render('pages/index',{
