@@ -17,6 +17,6 @@ server.use(routersMain)
 server.use(express.urlencoded({extended:true}))
 
 server.use((req:Request,res:Response)=>{
-     res.status(404).send('Pagina não encontrada')
+     res.status(404).render('pages/notFound')
 })
 server.listen(process.env.PORT)
