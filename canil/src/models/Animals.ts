@@ -28,6 +28,7 @@ export const Imgs : Animals = {
 }
 
 export const AnimalsSpec : AnimalsInfo[]= [
+
       {img:'images/pastor-alemao.jpg',name:'Pastor-alemão',color:'Amarelo e Preto',genre:'Masculino',especie:'cachorro'},
       {img:'images/labrador.jpg',name:'Labrador-retriever',color:'Branco',genre:'Masculino',especie:'cachorro'},
       {img:'images/zwergspitz.jpg',name:'Zwergspitz',color:'Amarelo',genre:'Feminino',especie:'cachorro'},
@@ -47,16 +48,17 @@ export const AnimalsSpec : AnimalsInfo[]= [
       {img:'images/acara.jpg',name:'Acará Bandeira',color:'Preto',genre:'Masculino',especie:'peixe'},
 
 ]
-/*
-export const filter = (p:string) =>{
-          let formatP = p.toLowerCase()
-          Animals.map((item)=>{
-                if(!item.name.toLowerCase().includes(formatP)){
-                     return false
-                }
-                else{
-                  return   [item.name]
-                }
-          })
+
+
+
+export const AnimalsFunctions = {
+     getAll : ():AnimalsInfo[] =>{
+         return AnimalsSpec
+     },
+     getSpec:(p:string):AnimalsInfo[]=>{
+         let manipulation:AnimalsInfo[] = AnimalsSpec.filter((item)=>item.especie === p)
+         return manipulation
       
-}*/
+     }
+}
+
