@@ -1,5 +1,5 @@
 import express,{Request,Response} from "express";
-import routersMain from '../src/routers/index'
+import routersMain from './routers/index'
 import mustache from 'mustache-express'
 import path from "path";
 import dotenv from 'dotenv'
